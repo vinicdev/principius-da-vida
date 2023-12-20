@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
+import React, { Component } from 'react';
+import Slider from 'react-slick';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
-import { images } from "../utils/images";
-import styled from "styled-components";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Image from 'next/image';
+import { images } from '../utils/images';
+import styled from 'styled-components';
 
 const CarouselContainer = styled.section`
   max-width: var(--max-width);
