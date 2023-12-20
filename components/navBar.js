@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import Button from "./button";
 import { images } from "../utils/images";
@@ -17,8 +17,9 @@ const TopNav = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 0 80px;
-    background-color: ${props => props.scrolled ? 'var(--yellow002)' : 'transparent'};
-    transition: background-color 0.3s ease;
+    background-color: rgba(31,31,31,.3764705882);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
 
     @media (max-width: 870px) {
         padding: 0 15px;
@@ -51,7 +52,7 @@ const ListMobile = styled.ul`
 `;
 
 const LinkList = styled.li`
-    color: ${props => props.scrolled ? 'var(--blue004)' : 'var(--white002)'};
+    color: var(--white002);
 `;
 
 const MenuButton = styled.button`
@@ -62,7 +63,7 @@ const MenuButton = styled.button`
 
     svg {
         font-size: 1.5rem;
-        color: ${props => props.scrolled ? 'var(--blue004)' : 'var(--white002)'}
+        color: var(--white002);
     }
 
     @media (max-width: ${breakpoint}px) {
@@ -90,26 +91,12 @@ const Line = styled.hr`
 
 
 export default function NavBar() {
-    const [scrolled, setScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 0;
-            setScrolled(isScrolled);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
-        <TopNav $scrolled={scrolled.toString()}>
+        <TopNav>
             <Image
-                src={images.logo.src}
+                src={images.logo2.src}
                 width={151}
                 height={101}
                 alt={images.logo.alt}
@@ -117,15 +104,15 @@ export default function NavBar() {
 
             <Nav>
                 <List>
-                    <LinkList $scrolled={scrolled.toString()} >
-                        <Link href="#">quem somos</Link>
+                    <LinkList>
+                        <Link href="#about">quem somos</Link>
                     </LinkList>
 
-                    <LinkList $scrolled={scrolled.toString()}>
-                        <Link href="#">ensino</Link>
+                    <LinkList>
+                        <Link href="#teaching">ensino</Link>
                     </LinkList>
 
-                    <LinkList $scrolled={scrolled.toString()}>
+                    <LinkList>
                         <Link href="#">contato</Link>
                     </LinkList>
 
@@ -138,7 +125,7 @@ export default function NavBar() {
                 </List>
             </Nav>
 
-            <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)} $scrolled={scrolled.toString()}>
+            <MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)} >
                 <GiHamburgerMenu />
             </MenuButton>
             
