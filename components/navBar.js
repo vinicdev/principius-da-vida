@@ -28,6 +28,15 @@ const TopNav = styled.div`
     @media (max-width: ${breakpoint}px) {
         padding: 0 20px;
     }
+
+    @media (max-width: 700px) {
+        height: 95px;
+
+        img {
+            width: 130px;
+            height: 80px;
+        }
+    }
 `;
 
 const Nav = styled.nav`
@@ -76,7 +85,7 @@ const MobileMenu = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     padding: 30px;
@@ -138,13 +147,13 @@ export default function NavBar() {
 
                     <ListMobile>
                         <LinkList >
-                            <Link href="#">quem somos</Link>
+                            <Link href="#about">quem somos</Link>
                         </LinkList>
 
                         <Line />
 
                         <LinkList>
-                            <Link href="#">ensino</Link>
+                            <Link href="#teaching">ensino</Link>
                         </LinkList>
 
                         <Line />
@@ -157,8 +166,9 @@ export default function NavBar() {
 
                         <LinkList>
                             <Button
-                                text='Matrículas'
+                                text='Matrículass'
                                 href='#'
+                                colorSelected='secondary'
                             />
                         </LinkList>
                     </ListMobile>

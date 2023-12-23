@@ -4,7 +4,7 @@ import NavBar from "./navBar";
 
 const Header = styled.header`
     width: 100%;
-    height:100vh;
+    height: 100vh;
     background-image: url(${images.bgHeader.src});
     background-position: center;
     background-repeat: no-repeat;
@@ -30,7 +30,6 @@ export default function TopHeader() {
     return (
         <Header>
             <NavBar />
-
         <Title>
             Educando com <TitleMarked>amor</TitleMarked> e <TitleMarked>princípios</TitleMarked> princípios.
         </Title>

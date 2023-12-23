@@ -3,21 +3,25 @@ import Button from "./button";
 
 const AboutContainter = styled.section`
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 80px;
+    padding: 20px 80px;
 
     @media(max-width: 1420px) {
-        padding: 0 40px;
+        padding: 20px 40px;
     }
 
     @media(max-width: 1300px) {
         justify-content: center;
         gap: 40px;
+    }
+
+    @media(max-width: 700px) {
+        padding: 20px;
     }
 `;
 
@@ -36,8 +40,7 @@ const SmallText = styled.span`
 `;
 
 const Title = styled.h2`
-    width: 450px;
-    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    max-width: 450px;
     color: var(--black005);
 `;
 
@@ -60,6 +63,10 @@ const ImageContainer = styled.div`
 
     @media(max-width: 1300px) {
         width: 100%;
+    }
+
+    @media(max-width: 800px) {
+        display: none;
     }
 `;
 

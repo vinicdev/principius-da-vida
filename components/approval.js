@@ -11,6 +11,12 @@ const Section = styled.section`
     align-items: center;
     justify-content: flex-end;
     padding: 60px;
+    
+    @media(max-width: 700px) {
+        background-position: center;
+        justify-content: center;
+        padding: 0;
+    }
 `;
 
 const Card = styled.div`
@@ -23,11 +29,14 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media(max-width: 700px) {
+        width: 90%;
+    }
 `;
 
 const Title = styled.h2`
     color: var(--blue003);
-    font-size: 2.25rem;
     padding-bottom: 8px;
 `;
 
@@ -48,7 +57,7 @@ export default function Approval() {
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </Text>
 
-                <Button href='#' text='Teste'/>
+                <Button href='#' text='Teste' />
             </Card>
         </Section>
     )
