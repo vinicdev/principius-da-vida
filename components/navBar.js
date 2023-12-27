@@ -122,7 +122,7 @@ export default function NavBar() {
                     </LinkList>
 
                     <LinkList>
-                        <Link href="#">contato</Link>
+                        <Link href="#contact">contato</Link>
                     </LinkList>
 
                     <LinkList>
@@ -147,19 +147,19 @@ export default function NavBar() {
 
                     <ListMobile>
                         <LinkList >
-                            <Link href="#about">quem somos</Link>
+                            <Link href="#about" onClick={() => setIsMenuOpen(false)}>quem somos</Link>
                         </LinkList>
 
                         <Line />
 
                         <LinkList>
-                            <Link href="#teaching">ensino</Link>
+                            <Link href="#teaching" onClick={() => setIsMenuOpen(false)}>ensino</Link>
                         </LinkList>
 
                         <Line />
 
                         <LinkList>
-                            <Link href="#">contato</Link>
+                            <Link href="#contact" onClick={() => setIsMenuOpen(false)} >contato</Link>
                         </LinkList>
 
                         <Line />
@@ -169,6 +169,7 @@ export default function NavBar() {
                                 text='Matrículass'
                                 href='#'
                                 colorSelected='secondary'
+                                onClick={() => setIsMenuOpen(false)}
                             />
                         </LinkList>
                     </ListMobile>
