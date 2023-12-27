@@ -32,8 +32,8 @@ const CardConteiner = styled.div`
         color: var(--white005);
     }
 
-    @media(max-width:700px) {
-        width: 95%;
+    @media(max-width: 999px) {
+        width: 100%;
     }
 `;
 
