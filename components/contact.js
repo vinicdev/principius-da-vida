@@ -63,6 +63,7 @@ const ButtonLink = styled(Link)`
 const ButtonModal = styled.button`
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 5px;
     background-color: var(--blue003);
     height: 35px;
@@ -124,7 +125,7 @@ export default function Contact() {
                     </Links>
                 </LinksContainer>
 
-                <LinksContainer>
+                {/* <LinksContainer>
                     <h3>
                         Redes Sociais
                     </h3>
@@ -140,7 +141,7 @@ export default function Contact() {
                             Facebook
                         </ButtonLink>
                     </Links>
-                </LinksContainer>
+                </LinksContainer> */}
             </TextoContainer>
 
             <Modal isOpen={isModalOpen} onClose={closeModal}>
