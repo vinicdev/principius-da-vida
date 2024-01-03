@@ -5,8 +5,8 @@ import NavBar from "./navBar";
 const Header = styled.header`
     width: 100%;
     height: 100vh;
-    /* background-image: url(${images.bgHeader.src}); */
-    background-image: url('/bg.jpg');
+    background-image: url(${images.bgHeader.src});
+    /* background-image: url('/bg.jpg'); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,6 +20,7 @@ const Title = styled.h1`
     padding-top: 168px;
     padding: 298px 20px 0;
     font-size: clamp(1.5rem, 4vw, 4rem);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
 const TitleMarked = styled.u`
