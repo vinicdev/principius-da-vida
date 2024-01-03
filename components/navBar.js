@@ -128,7 +128,7 @@ export default function NavBar() {
                     <LinkList>
                         <Button
                             text='Matrículas'
-                            href='#'
+                            href='/matricula'
                         />
                     </LinkList>
                 </List>
