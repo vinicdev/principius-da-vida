@@ -13,6 +13,10 @@ const Container = styled.section`
     justify-content: center;
     flex-wrap: wrap;
 
+    background-image: url(/banner1.svg),url(/banner2.svg);
+    background-position: left,right;
+    background-repeat: no-repeat;
+
     @media(max-width: 700px) {
         padding: 20px;
     }
