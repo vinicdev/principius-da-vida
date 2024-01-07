@@ -86,9 +86,9 @@ const MobileMenu = styled.div`
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 1000;
-    padding: 30px;
+    padding: 40px 30px;
 `;
 
 const Line = styled.hr`
